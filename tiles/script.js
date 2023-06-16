@@ -5,7 +5,7 @@ canvas.height = window.innerHeight - 65;
 let laneWidth = canvas.width / 4;
 let tileHeight = 150;
 let animationId;
-let gameSpeed = 1;
+let gameSpeed = 1.25;
 let dead = false;
 let tiles = [];
 let keyOrder = [];
