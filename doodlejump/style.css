@@ -1,0 +1,30 @@
+.hoverer {
+    opacity: 1;
+}
+
+.GAME-BAR {
+    background: black !important;
+}
+
+#game {
+    display: block;
+    margin: auto;
+    background: white;
+    border: 5px solid black;
+    max-height: 100%;
+    max-width: 100%;
+    position: fixed;
+    left: 36vw;
+    top: 4vw;
+}
+
+#instructions {
+    margin-left: 0.5vw;
+    margin-top: 0.5vw;
+}
+
+.my-name {
+    position: absolute;
+    top: 96vh;
+    color: aqua;
+}

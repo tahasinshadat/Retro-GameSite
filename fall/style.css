@@ -1,0 +1,90 @@
+.hoverer {
+    opacity: 1;
+}
+
+.GAME-BAR {
+    background: #000000 !important;
+    position: relative;
+    z-index: 9999;
+}
+
+:root {
+    --hue: 200;
+    --saturation: 25%;
+    --foreground-color:  hsl(200, var(--saturation), 75%);
+    --background-color:  hsl(var(--hue), var(--saturation), 15%);
+    --width: 65;
+    --hole: 12.5;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color) !important;
+    overflow: hidden !important;
+}
+
+.ball {
+    --x: 50;
+    --y: 10;
+    position: absolute;
+    z-index: 9998;
+    background-color: var(--foreground-color);
+    width: 2.5vh;
+    height: 2.5vh;
+    left: calc(var(--x) * 1vw);
+    top: calc(var(--y) * 1vh);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.floor {
+    position: absolute;
+    /* background-color: var(--foreground-color); */
+    /* width: calc(var(--width) * 1vw); */
+    height: 1.5vh;
+    /* top: calc(var(--y) * 1vh); */
+    border-radius: 20px;
+}
+
+.floor2 {
+    position: absolute;
+    /* background-color: var(--foreground-color); */
+    /* width: calc(calc(100 - var(--width) - var(--hole)) * 1vw); */
+    height: 1.5vh;
+    right: 0;
+    /* top: calc(var(--y) * 1vh); */
+    border-radius: 20px;
+}
+
+#score {
+    color: rgb(199, 199, 199);
+    position: absolute;
+    z-index: 10;
+    background: rgba(34, 34, 34, 0.5);
+    padding: 2px;
+    font-size: 2vw;
+}
+
+#Title {
+    font-family: monospace bold;
+    font-size: 5vw;
+    animation-name: slideout;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    display: block;
+}
+
+@keyframes slideout {
+    from {margin-top: 60px;}
+    to {margin-top: -150px;}
+}
+  
+.my-name {
+    position: absolute;
+    top: 96vh;
+    color: aqua;
+}

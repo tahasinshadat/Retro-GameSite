@@ -1,0 +1,174 @@
+.hoverer {
+    opacity: 1;
+}
+
+.GAME-BAR {
+    background: black !important;
+}
+
+/* General CSS for board */
+
+body {
+    overflow: hidden;
+}
+
+:root {
+    --cellSize: 150px;
+    --markSize: calc(var(--cellSize) * 0.9);
+}
+
+.board {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+    align-items: center;
+    margin-top: -7vh;
+}
+
+.cell {
+    width: var(--cellSize);
+    height: var(--cellSize);
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.Header {
+    position: relative;
+    font-size: 7vh;
+    top: 15vh;
+}
+
+/* Remove borders borders from the board */
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8) {
+    border-bottom: none;
+}
+
+
+
+/* Create X for the board with divs + hover affect */
+
+.cell.x::before,
+.cell.x::after, 
+.board.x .cell:not(.x):not(.o):hover::before,
+.board.x .cell:not(.x):not(.o):hover::after {
+    content: '';
+    width: calc(var(--markSize) * 0.15);
+    height: calc(var(--markSize));
+    background-color: white;
+    position: absolute;
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.o):hover::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.o):hover::after {
+    transform: rotate(-45deg);
+}
+
+.cell.x::before,
+.cell.x::after,
+.cell.o::before {
+    background: white;
+}
+
+.board.x .cell:not(.x):not(.o):hover::before,
+.board.x .cell:not(.x):not(.o):hover::after,
+.board.o .cell:not(.x):not(.o):hover::before {
+    background: rgb(95, 95, 95);
+}
+
+
+
+/* Create O for the board with divs + hover affect */
+
+.cell.o::before,
+.cell.o::after,
+.board.o .cell:not(.x):not(.o):hover::before,
+.board.o .cell:not(.x):not(.o):hover::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.cell.o::before,
+.board.o .cell:not(.x):not(.o):hover::before {
+    width: calc(var(--markSize) * 0.9);
+    height: calc(var(--markSize) * 0.9);
+}
+
+.cell.o::after,
+.board.o .cell:not(.x):not(.o):hover::after {
+    width: calc(var(--markSize) * 0.65);
+    height: calc(var(--markSize) * 0.65);
+    background-color: #212529;
+}
+
+
+/* Shows Not-Allowed Cursor when cell is filled */
+.cell.x,
+.cell.o {
+    cursor: not-allowed;
+}
+
+.winningScreen { 
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    border: white solid 1px;
+    top: 56px !important;
+    left: 0 !important;
+    position: absolute;
+    height: calc(100% - 56px);
+    width: 100%;
+    font-size: 8vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.winningScreen.show { 
+    display: block;
+}
+
+.playAgain {
+    position: relative;
+    top: 55vh !important;
+}
+
+.win {
+    position: relative;
+    top: 15vh;
+}
+
+.my-name {
+    position: absolute;
+    top: 96vh;
+    color: aqua;
+}

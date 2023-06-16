@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.hoverer {
+    opacity: 1;
+}
+
+.GAME-BAR {
+    background: black !important;
+}
+
+canvas {
+    display: block;
+    background: rgb(160,254,255);
+    background: linear-gradient(0deg, rgba(160,254,255,1) 0%, rgba(36,115,249,1) 100%);
+    border: 5px solid black;
+    margin: auto;
+}
+
+img {
+    margin-top: -26.5vw;
+    margin-left: 13.9vw;
+}
+
+.offset {
+    display: flex;
+    justify-content: end;
+    margin-top: 8vw;
+}
+
+@media (max-width: 991px) {
+    .offset {
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+    img {
+        display: none;
+    }
+}
+
+.my-name {
+    position: absolute;
+    top: 96vh;
+    color: aqua;
+}

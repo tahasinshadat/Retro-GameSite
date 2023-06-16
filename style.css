@@ -1,0 +1,331 @@
+.hoverer {
+    opacity: 1;
+}
+
+.GAME-BAR {
+    position: relative;
+    z-index: 9999;
+    background: black !important;
+}
+
+body {
+    overflow: hidden;
+    background-color: rgba(15,23,60,255) !important;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+    /* WELCOME PAGE */
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#infoBox {
+    background-color: rgba(26,32,75,255) !important;
+    top: 6vw;
+    left: 3vw;
+    right: 3vw;
+    border: 0.1px black solid;
+    border-radius: 50px;
+    box-shadow: 0px 0px 4px 0.5px rgb(15, 15, 15);
+    height: 82vh;
+    padding-left: 5vw;
+    position: fixed;
+}
+
+#infoBox h2{
+    font-size: 7vh;
+}
+
+
+.CENTER {
+    padding: 5vw;
+}
+
+.COLOR {
+    color: rgba(216,216,228,255);
+}
+
+.textIndex {
+    position: relative;
+    z-index: 100;
+}
+
+.redCircle {
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    background-image: linear-gradient(45deg, #ff0000 0%, #ff00df 100%);
+    left: -1vw; 
+    top: 0vh;  
+}
+
+.yellowCircle {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #00dcff;
+    background-image: linear-gradient(43deg, #00dcff 0%, #2edacd 54%, #a2ff00 100%);
+    left: 75vw; 
+    top: 6.5vh;  
+    z-index: 2;
+}
+
+.greenCircle {
+    position: fixed;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: #00dcff;
+    background-image: linear-gradient(43deg, #00dcff 0%, #2edacd 54%, #a2ff00 100%);    
+    left: 10vw;
+    top: 85vh;  
+}
+
+.blueCircle {
+    position: fixed;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    background-image: linear-gradient(45deg, #ff0000 0%, #ff00df 100%);
+    left: 60vw;
+    top: 87.5vh;  
+    z-index: 2;
+}
+
+.pinkCircle {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #ff00b4;
+    background-image: linear-gradient(65deg, #ff00b4 0%, #b700ff 72%, #8100b7 100%);
+    left: 87vw;
+    top: 86vh;  
+}
+
+.textCircle {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #ff00b4;
+    background-image: linear-gradient(215deg, #ff00b4 0%, #b700ff 72%, #8100b7 100%);
+    left: 24vw;
+    top: 23vh;  
+    z-index: 2;
+}
+
+.LARGE {
+    width: 45vw;
+}
+
+.btn:hover {
+    background-color: #fffa2a;
+    background-image: linear-gradient(45deg, #fffa2a 0%, #6aff00 20%, #04ffef 40%, #0025ff 60%, #813eff 80%, red 100%);
+    transform: scale(1.2); 
+    transition: transform 0.5s ease; 
+    animation: tiltShake 0.5s infinite;
+}
+
+@keyframes tiltShake {
+    0% {
+      transform: scale(1) translateX(0) rotate(0);
+    }
+    25% {
+      transform: scale(1.1) translateX(-3px) rotate(-3deg);
+    }
+    50% {
+      transform: scale(1.2) translateX(3px) rotate(3deg);
+    }
+    75% {
+      transform: scale(1.1) translateX(-3px) rotate(-3deg);
+    }
+    100% {
+      transform: scale(1) translateX(0) rotate(0);
+    }
+}
+
+#infoBox {
+    transition: opacity 2s, transform 2s;
+}
+  
+.zoom-fade-out {
+    opacity: 0;
+    transform: scale(3);
+}
+
+.zoom-in {
+    animation: zoom-in 0.75s ease-in-out;
+    opacity: 0;
+}
+  
+@keyframes zoom-in {
+    0% {
+      transform: scale(0.25);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+    /* GAME PAGE */
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    grid-auto-rows: minmax(15vw, auto);
+}
+
+.wrapper > div {
+    color: white ;
+    border: 3px black solid;
+    height: 35vh;
+    margin: 1vw;
+    z-index: 10;
+    border-radius: 30px;
+    overflow: hidden;
+    animation: slide-up 0.5s ease forwards;
+    opacity: 0;
+    transition: box-shadow 0.3s ease;
+}
+
+.wrapper > div > .imageDiv{
+    height: 75%;
+}
+
+.wrapper > div > .descriptionDiv{
+    height: 75%;
+    background-color: black;
+}
+
+.imgSized {
+    height: 100%;
+    width: 100%;
+}
+
+/*  Animation */
+@keyframes slide-up {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.wrapper > div:nth-child(1) {
+    animation-delay: 0.2s;
+}
+  
+.wrapper > div:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.wrapper > div:nth-child(3) {
+    animation-delay: 0.6s;
+}
+  
+.wrapper > div:nth-child(4) {
+    animation-delay: 0.8s;
+}
+  
+.wrapper > div:nth-child(5) {
+    animation-delay: 1s;
+}
+  
+.wrapper > div:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.wrapper > div:nth-child(7) {
+    animation-delay: 1.4s;
+}
+  
+.wrapper > div:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+.wrapper > div:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgb(0, 204, 255);
+}
+
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+    /* ABOUT PAGE */
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.journal {
+    background: linear-gradient(-45deg, #ee3cc7, #ba2ef1, #3bf8ff, #2b18d6);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    top: 5vw;
+    left: 3vw;
+    right: 3vw;
+    border: 0.1px black solid;
+    box-shadow: 0px 0px 50px 1px rgb(15, 15, 15);
+    height: 85vh;
+    padding-left: 5vw;
+    position: fixed;
+    overflow: auto;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 85% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.journey {
+    background-color: rgba(26,32,75,255) !important;
+    top: 6vw;
+    left: 4vw;
+    right: 4vw;
+    border: 0.1px black solid;
+    height: 81vh;
+    padding: 1vw;
+    padding-left: 5vw;
+    position: fixed;
+    color: white;
+    overflow: auto;
+}
+
+.journey::-webkit-scrollbar {
+    width: 10px;
+}
+
+.journey::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.journey::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.journey::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.Size {
+    font-size: 20px;
+}

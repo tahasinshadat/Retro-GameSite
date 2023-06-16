@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png">
+    <title>Retro GameSite - Games</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6a2a583ad9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="GAME-BAR">
+        <nav class="navbar navbar-expand-lg navbar-dark px-3 py-2">
+            <a href="#" class="navbar-brand text-light">Game Bar</a>
+
+            <button 
+                class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse hoverer" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link px-4">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="game.html" class="nav-link px-4">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link px-4">About</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="snake/index.html" class="nav-link px-4"><i class="fa-sharp fa-solid fa-staff-snake"></i> Snake </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="runner/index.html" class="nav-link px-4"><i class="fa-solid fa-person-running"></i> Runner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="flappy/index.html" class="nav-link px-4"><i class="fa-sharp fa-solid fa-feather"></i> Flappy Bird</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tictac/index.html" class="nav-link px-4"><i class="fa-duotone fa-hashtag fa-lg"></i> Tic-Tac-Toe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pong/index.html" class="nav-link px-4"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Pong</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="fall/index.html" class="nav-link px-4"><i class="fa-solid fa-person-falling"></i> Fall</a>
+                    </li> -->
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="redCircle"></div>
+    <div class="yellowCircle"></div>
+    <div class="greenCircle"></div>
+    <div class="blueCircle"></div>
+    <div class="pinkCircle"></div>
+    <div class="textCircle"></div>
+
+
+    <h1 class="text-center p-2 text-light">.games()</h1>
+    <section>
+        <div class="wrapper">
+
+            <div class="game1">
+
+                <div class="imageDiv">
+                    <a href="snake/index.html"><img src="images/snakeThumbnail.png" class="imgSized" alt="" /></a>
+                </div>
+
+                <div class="descriptionDiv">
+                    <a href="snake/index.html">
+                    <h3>Snake</h3>
+                    <p>The classic snake game.</p>
+                </a>
+                </div>
+
+                <!-- 
+                    1st Completed Project:
+                    - Learned modularization
+                    - Imported and exported tons of functions from one file to 
+                    another which helped with organization 
+                    - Also used bootstrap for the first time on a project
+                -->
+                
+            </div>
+
+            <div class="game2">
+                <div class="imageDiv">
+                    <a href="pong/index.html"><img src="images/pong.png" class="imgSized" alt="" /></a>
+                </div>
+
+                <div class="descriptionDiv">
+                    <a href="pong/index.html">
+                    <h3>Pong</h3>
+                    <p>A classic table tennis game.</p>
+                </a>
+                </div>
+                <!-- 
+                    3rd Completed Project:
+                    - Learned about and used getter and setter functions
+                    - Deeper understanding of classes
+                    - Combined what I learned from Snake and Runner
+                        ^-> modularization with classes
+                    - I also learned/ implemented my very first AI/Computer into a 
+                    project.
+                    - Started to learn/experiment with CSS variables!
+                -->
+            </div>
+
+            <div class="game3">
+                <div class="imageDiv">
+                    <a href="flappy/index.html"><img src="images/flappyBird.jpg" class="imgSized" alt="" /></a>
+                </div>
+
+                <div class="descriptionDiv">
+                    <a href="flappy/index.html">
+                    <h3>Flappy Bird</h3>
+                    <p>Tap to navigate a bird through obstacles.</p>
+                </a>
+                </div>
+                <!-- 
+                    4th Completed Project:
+                    - Deepend my knowledge on canvas (orgin rotations and transltaions)
+                    - Learned to make my classes more simple and abstracted
+                    - Learned about why and how memory and digital footprints are utilized
+                    - Learned the importance of clear and clean code and why modularization is so useful
+                -->
+            </div>
+
+            <div class="game4">
+                <div class="imageDiv">
+                    <a href="tictac/index.html"><img src="images/ttt.png" class="imgSized" alt="" /></a>
+                </div>
+
+                <div class="descriptionDiv">
+                    <a href="tictac/index.html">
+                    <h3>Tic-Tac-Toe</h3>
+                    <p>Play the classic game of Xs and Os against a friend.</p>
+                </a>
+                </div>
+                
+            </div>
+
+            <div class="game5">
+                <div class="imageDiv">
+                    <a href="runner/index.html"><img src="images/narutoRun.webp" class="imgSized" alt="" /></a>
+                </div>
+
+                <div class="descriptionDiv">
+                    <a href="runner/index.html">
+                    <h3>Ninja Run</h3>
+                    <p>Dodge obstacles as Naruto in this fast-paced platformer.</p>
+                </a>
+                </div>
+                <!-- 
+                    2nd Completed Project:
+                    - Learned about canvas.js library & used classes and objects for the 
+                    first time in a project. 
+                    - Learned and implemented a bit of recursion
+                    - Created my very first animations and also learned how to make my 
+                    own gifs.
+                -->
+            </div>
+
+            <div class="game6">
+                <div class="imageDiv">
+                    <a href="fall/index.html"><img src="images/fall.png" class="imgSized" alt="" /></a>
+                </div>
+
+                <div class="descriptionDiv">
+                    <a href="fall/index.html">
+                    <h3>Endless Fall</h3>
+                    <p>Fall down an endless pit while avoiding obstacles.</p>
+                </a>
+                </div>
+            </div>
+
+            <div class="game7">
+                <div class="imageDiv">
+                    <a href="doodlejump/index.html"><img src="images/doodle.png" class="imgSized" alt="" /></a>
+                </div>
+
+                <div class="descriptionDiv">
+                    <a href="doodlejump/index.html">
+                    <h3>Doodle Jump</h3>
+                    <p>Join Doodler on his adventure to reach new heights.</p>
+                </a>
+                </div>
+            </div>
+
+            <div class="game8">
+                <div class="imageDiv">
+                    <a href="tiles/index.html"><img src="images/tiles.png" class="imgSized" alt="" /></a>
+                </div>
+
+                <div class="descriptionDiv">
+                    <a href="tiles/index.html">
+                    <h3>KeyBoard Warrior</h3>
+                    <p>Basically just piano tiles but worse.</p>
+                </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
